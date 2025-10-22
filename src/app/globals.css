@@ -5,10 +5,7 @@
 /* Fun Font Variables */
 :root {
   --font-bebas-neue: 'Bebas Neue', cursive;
-  --font-bangers: 'Bangers', cursive;
   --font-lilita-one: 'Lilita One', cursive;
-  --font-permanent-marker: 'Permanent Marker', cursive;
-  --font-press-start-2p: 'Press Start 2P', cursive;
 }
 
 /* Fun Typography Classes */
@@ -16,46 +13,98 @@
   font-family: var(--font-bebas-neue);
 }
 
-.font-bangers {
-  font-family: var(--font-bangers);
-}
-
 .font-lilita {
   font-family: var(--font-lilita-one);
 }
 
-.font-marker {
-  font-family: var(--font-permanent-marker);
+/* Special Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
 }
 
-.font-pixel {
-  font-family: var(--font-press-start-2p);
+@keyframes gentle-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: scale(1.02);
+    opacity: 1;
+  }
 }
 
-/* Fun Text Effects */
-.text-shadow-fun {
-  text-shadow: 2px 2px 0px #ff6b6b, 4px 4px 0px #4ecdc4, 6px 6px 0px #45b7d1, 8px 8px 0px #96ceb4;
+@keyframes fade-in-up {
+  0% { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.text-shadow-glow {
-  text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700, 0 0 20px #ffd700, 0 0 35px #ffd700, 0 0 40px #ffd700;
+/* Parallax Effects */
+.parallax-slow {
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-.text-shadow-neon {
-  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+.parallax-medium {
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-.text-shadow-fire {
-  text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 15px #ff4500, 0 0 20px #ff4500, 0 0 35px #ff4500;
+.parallax-fast {
+  transform: translateZ(0);
+  will-change: transform;
 }
 
-.text-outline {
-  -webkit-text-stroke: 1px #ffd700;
-  text-stroke: 1px #ffd700;
-  text-shadow: 2px 2px 0px #000000;
+/* Special Effect Classes */
+.float-gentle {
+  animation: float 4s ease-in-out infinite;
 }
 
-/* Burbank Font Face */
+.gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Clean Text Effects */
+.text-shadow-clean {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-colorful {
+  text-shadow: 2px 2px 0px #ff6b6b, 4px 4px 0px #4ecdc4;
+}
+
+.text-outline-clean {
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
 @font-face {
   font-family: 'Burbank';
   src: url('/fonts/Burbank-Big-Condensed-Black.otf') format('opentype');

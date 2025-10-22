@@ -26,33 +26,21 @@ export default function Home() {
   }
 
   useEffect(() => {
-    // Create falling lion emojis
-    const createFallingLion = () => {
-      const lion = document.createElement('div')
-      lion.innerHTML = '🦁'
-      lion.style.position = 'fixed'
-      lion.style.left = Math.random() * window.innerWidth + 'px'
-      lion.style.top = '-50px'
-      lion.style.fontSize = Math.random() * 20 + 20 + 'px'
-      lion.style.zIndex = '1'
-      lion.style.pointerEvents = 'none'
-      lion.style.opacity = '0.3'
-      lion.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`
+    // Parallax scrolling effect
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset
+      const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast')
       
-      document.body.appendChild(lion)
-      
-      // Remove the element after animation
-      setTimeout(() => {
-        if (lion.parentNode) {
-          lion.parentNode.removeChild(lion)
-        }
-      }, 5000)
+      parallaxElements.forEach((element) => {
+        const speed = element.classList.contains('parallax-slow') ? 0.5 : 
+                     element.classList.contains('parallax-medium') ? 0.7 : 1
+        const yPos = -(scrolled * speed)
+        element.style.transform = `translateY(${yPos}px)`
+      })
     }
 
-    // Create lions periodically
-    const interval = setInterval(createFallingLion, 800)
-
-    return () => clearInterval(interval)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   if (isLoading) {
@@ -78,7 +66,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-4 lg:py-6 gap-4 lg:gap-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg">
+              <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg hover-scale gentle-pulse">
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
@@ -87,7 +75,7 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-fire">
+              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-lilita text-shadow-colorful">
                 $rawr
               </h1>
             </div>
@@ -108,14 +96,14 @@ export default function Home() {
               </button>
             </div>
             
-            <a
-              href={pumpFunUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              Buy Now
-            </a>
+              <a
+                href={pumpFunUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
+              >
+                Buy Now
+              </a>
           </div>
         </div>
       </nav>
@@ -126,14 +114,17 @@ export default function Home() {
           {/* Logo */}
           <div className="relative mb-8 lg:mb-12">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-8 flex items-center justify-center">
-              <div className="relative group">
+              <div className="relative group parallax-slow">
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
                   width={320}
                   height={320}
-                  className="relative rounded-2xl w-full h-full object-cover shadow-2xl"
+                  className="relative rounded-2xl w-full h-full object-cover shadow-2xl hover-scale fade-in-up"
+                  onLoad={(e) => {
+                    e.currentTarget.style.animation = 'gentle-pulse 2s ease-in-out';
+                  }}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
@@ -148,10 +139,10 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-neon">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful parallax-medium">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-marker text-outline">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-lilita text-shadow-colorful parallax-fast">
               little cat big rawr
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
@@ -170,11 +161,11 @@ export default function Home() {
         {/* Social Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* X Community Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10">
+          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift parallax-slow">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
                   <Image
                     src="/images/sample-x-logo.svg"
                     alt="X Logo"
@@ -183,7 +174,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-fire">X Community</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful">X Community</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -194,7 +185,7 @@ export default function Home() {
                   href={xCommunityUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
                 >
                   <span>Join Community</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,11 +197,11 @@ export default function Home() {
           </div>
 
           {/* Dexscreener Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10">
+          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift parallax-medium">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
                   <Image
                     src="/images/dex-screener-logo-png_seeklogo-527276.png"
                     alt="Dexscreener Logo"
@@ -219,7 +210,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-neon">Dexscreener</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful float-animation">Dexscreener</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -230,7 +221,7 @@ export default function Home() {
                   href={dexscreenerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
                 >
                   <span>View Chart</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,7 +236,7 @@ export default function Home() {
         {/* Chart Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-bangers text-shadow-fire">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-colorful">
               Live Chart
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -267,7 +258,7 @@ export default function Home() {
         {/* Memes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-neon">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-colorful">
               Community Memes
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -324,7 +315,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-sm">$</span>
               </div>
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-fire">
+              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-lilita text-shadow-colorful">
                 $rawr
               </h4>
             </div>
