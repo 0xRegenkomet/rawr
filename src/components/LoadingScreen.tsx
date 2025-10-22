@@ -32,7 +32,7 @@ export default function LoadingScreen() {
       <div className="relative mb-12">
         <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 flex items-center justify-center">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
             <Image
               src="/images/rawr.jpg"
               alt="$rawr Logo"
@@ -47,7 +47,7 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent mb-4 animate-pulse font-lilita text-shadow-colorful">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-4 animate-pulse font-lilita text-shadow-colorful">
           $rawr
         </h2>
         <p className="text-gray-300 text-lg lg:text-xl font-light font-lilita text-shadow-colorful">
