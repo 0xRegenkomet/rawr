@@ -4,32 +4,32 @@
 
 /* Fun Font Variables */
 :root {
-  --font-fredoka-one: 'Fredoka One', cursive;
-  --font-bungee: 'Bungee', cursive;
-  --font-righteous: 'Righteous', cursive;
-  --font-creepster: 'Creepster', cursive;
-  --font-nosifer: 'Nosifer', cursive;
+  --font-bebas-neue: 'Bebas Neue', cursive;
+  --font-bangers: 'Bangers', cursive;
+  --font-lilita-one: 'Lilita One', cursive;
+  --font-permanent-marker: 'Permanent Marker', cursive;
+  --font-press-start-2p: 'Press Start 2P', cursive;
 }
 
 /* Fun Typography Classes */
-.font-fredoka {
-  font-family: var(--font-fredoka-one);
+.font-bebas {
+  font-family: var(--font-bebas-neue);
 }
 
-.font-bungee {
-  font-family: var(--font-bungee);
+.font-bangers {
+  font-family: var(--font-bangers);
 }
 
-.font-righteous {
-  font-family: var(--font-righteous);
+.font-lilita {
+  font-family: var(--font-lilita-one);
 }
 
-.font-creepster {
-  font-family: var(--font-creepster);
+.font-marker {
+  font-family: var(--font-permanent-marker);
 }
 
-.font-nosifer {
-  font-family: var(--font-nosifer);
+.font-pixel {
+  font-family: var(--font-press-start-2p);
 }
 
 /* Fun Text Effects */

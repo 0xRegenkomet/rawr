@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins, Montserrat, Fredoka_One, Bungee, Righteous, Creepster, Nosifer } from 'next/font/google'
+import { Inter, Poppins, Montserrat, Bebas_Neue, Bangers, Lilita_One, Permanent_Marker, Press_Start_2P } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,33 +15,33 @@ const montserrat = Montserrat({
   display: 'swap',
   weight: ['300', '400', '500', '600', '700']
 })
-const fredokaOne = Fredoka_One({ 
+const bebasNeue = Bebas_Neue({ 
   subsets: ['latin'],
-  variable: '--font-fredoka-one',
+  variable: '--font-bebas-neue',
   display: 'swap',
   weight: '400'
 })
-const bungee = Bungee({ 
+const bangers = Bangers({ 
   subsets: ['latin'],
-  variable: '--font-bungee',
+  variable: '--font-bangers',
   display: 'swap',
   weight: '400'
 })
-const righteous = Righteous({ 
+const lilitaOne = Lilita_One({ 
   subsets: ['latin'],
-  variable: '--font-righteous',
+  variable: '--font-lilita-one',
   display: 'swap',
   weight: '400'
 })
-const creepster = Creepster({ 
+const permanentMarker = Permanent_Marker({ 
   subsets: ['latin'],
-  variable: '--font-creepster',
+  variable: '--font-permanent-marker',
   display: 'swap',
   weight: '400'
 })
-const nosifer = Nosifer({ 
+const pressStart2P = Press_Start_2P({ 
   subsets: ['latin'],
-  variable: '--font-nosifer',
+  variable: '--font-press-start-2p',
   display: 'swap',
   weight: '400'
 })
@@ -77,7 +77,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${poppins.variable} ${montserrat.variable} ${fredokaOne.variable} ${bungee.variable} ${righteous.variable} ${creepster.variable} ${nosifer.variable}`}>{children}</body>
+      <body className={`${inter.className} ${poppins.variable} ${montserrat.variable} ${bebasNeue.variable} ${bangers.variable} ${lilitaOne.variable} ${permanentMarker.variable} ${pressStart2P.variable}`}>{children}</body>
     </html>
   )
 }

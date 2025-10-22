@@ -47,10 +47,10 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-pulse font-fredoka text-shadow-fun">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent mb-4 animate-pulse font-lilita text-shadow-fun">
           $rawr
         </h2>
-        <p className="text-gray-300 text-lg lg:text-xl font-light font-righteous text-outline">
+        <p className="text-gray-300 text-lg lg:text-xl font-light font-marker">
           Loading little cat...
         </p>
       </div>
