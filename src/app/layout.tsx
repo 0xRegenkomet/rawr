@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Poppins, Montserrat } from 'next/font/google'
+import { Inter, Poppins, Montserrat, Fredoka_One, Bungee, Righteous, Creepster, Nosifer } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -14,6 +14,36 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700']
+})
+const fredokaOne = Fredoka_One({ 
+  subsets: ['latin'],
+  variable: '--font-fredoka-one',
+  display: 'swap',
+  weight: '400'
+})
+const bungee = Bungee({ 
+  subsets: ['latin'],
+  variable: '--font-bungee',
+  display: 'swap',
+  weight: '400'
+})
+const righteous = Righteous({ 
+  subsets: ['latin'],
+  variable: '--font-righteous',
+  display: 'swap',
+  weight: '400'
+})
+const creepster = Creepster({ 
+  subsets: ['latin'],
+  variable: '--font-creepster',
+  display: 'swap',
+  weight: '400'
+})
+const nosifer = Nosifer({ 
+  subsets: ['latin'],
+  variable: '--font-nosifer',
+  display: 'swap',
+  weight: '400'
 })
 
 export const metadata: Metadata = {
@@ -47,7 +77,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${poppins.variable} ${montserrat.variable}`}>{children}</body>
+      <body className={`${inter.className} ${poppins.variable} ${montserrat.variable} ${fredokaOne.variable} ${bungee.variable} ${righteous.variable} ${creepster.variable} ${nosifer.variable}`}>{children}</body>
     </html>
   )
 }

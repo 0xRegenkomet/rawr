@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fun Font Variables */
+:root {
+  --font-fredoka-one: 'Fredoka One', cursive;
+  --font-bungee: 'Bungee', cursive;
+  --font-righteous: 'Righteous', cursive;
+  --font-creepster: 'Creepster', cursive;
+  --font-nosifer: 'Nosifer', cursive;
+}
+
+/* Fun Typography Classes */
+.font-fredoka {
+  font-family: var(--font-fredoka-one);
+}
+
+.font-bungee {
+  font-family: var(--font-bungee);
+}
+
+.font-righteous {
+  font-family: var(--font-righteous);
+}
+
+.font-creepster {
+  font-family: var(--font-creepster);
+}
+
+.font-nosifer {
+  font-family: var(--font-nosifer);
+}
+
+/* Fun Text Effects */
+.text-shadow-fun {
+  text-shadow: 3px 3px 0px #ff6b6b, 6px 6px 0px #4ecdc4, 9px 9px 0px #45b7d1;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px #ffd700;
+  text-stroke: 2px #ffd700;
+}
+
 /* Burbank Font Face */
 @font-face {
   font-family: 'Burbank';

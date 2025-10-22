@@ -81,7 +81,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-sm">$</span>
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bungee text-shadow-glow">
                 $rawr
               </h1>
             </div>
@@ -142,10 +142,10 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-fredoka text-shadow-fun">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-righteous text-outline">
               little cat big rawr
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
@@ -177,7 +177,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2">X Community</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-creepster text-shadow-glow">X Community</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -213,7 +213,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2">Dexscreener</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-nosifer text-shadow-glow">Dexscreener</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -239,7 +239,7 @@ export default function Home() {
         {/* Chart Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-bungee text-shadow-fun">
               Live Chart
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -261,7 +261,7 @@ export default function Home() {
         {/* Memes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-fredoka text-shadow-fun">
               Community Memes
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -318,7 +318,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-sm">$</span>
               </div>
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bungee text-shadow-glow">
                 $rawr
               </h4>
             </div>
