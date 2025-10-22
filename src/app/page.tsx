@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       
       {/* Navbar */}
-      <nav className="relative bg-white/80 backdrop-blur-sm border-b z-10" style={{borderColor: '#A2612B', borderWidth: '2px'}}>
+      <nav className="relative bg-white/80 backdrop-blur-sm border-b z-10" style={{borderColor: '#FF8C00', borderWidth: '2px'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-4 lg:py-6 gap-4 lg:gap-0">
             <div className="flex items-center space-x-3">
@@ -63,15 +63,15 @@ export default function Home() {
               </h1>
             </div>
             
-            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 border" style={{borderColor: '#A2612B', borderWidth: '2px'}}>
+            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 border" style={{borderColor: '#FF8C00', borderWidth: '2px'}}>
               <span className="text-sm text-black font-medium">Contract:</span>
-              <code className="text-xs px-3 py-1 rounded font-mono max-w-[200px] lg:max-w-none truncate" style={{color: '#A2612B', backgroundColor: 'rgba(162, 97, 43, 0.1)'}}>
+              <code className="text-xs px-3 py-1 rounded font-mono max-w-[200px] lg:max-w-none truncate" style={{color: '#FF8C00', backgroundColor: 'rgba(255, 140, 0, 0.1)'}}>
                 {contractAddress}
               </code>
               <button
                 onClick={() => copyToClipboard(contractAddress)}
                 className="text-gray-600 transition-colors p-1 hover:bg-gray-200 rounded"
-                style={{color: '#A2612B'}}
+                style={{color: '#FF8C00'}}
                 title="Copy contract address"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
-                style={{backgroundColor: '#A2612B', color: 'white'}}
+                style={{backgroundColor: '#FF8C00', color: 'white'}}
               >
                 Buy Now
               </a>
@@ -100,13 +100,16 @@ export default function Home() {
           <div className="relative mb-8 lg:mb-12">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-8 flex items-center justify-center">
               <div className="relative group">
-                <div className="absolute inset-0 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" style={{backgroundColor: '#A2612B'}}></div>
+                <div className="absolute inset-0 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" style={{backgroundColor: '#FF8C00'}}></div>
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
                   width={320}
                   height={320}
                   className="relative rounded-2xl w-full h-full object-cover shadow-2xl hover-scale"
+                  onLoad={(e) => {
+                    e.currentTarget.style.animation = 'bounce-in 0.8s ease-out';
+                  }}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
@@ -125,16 +128,16 @@ export default function Home() {
               little cat
             </h2>
             <p className="text-xl sm:text-2xl lg:text-3xl text-black font-light max-w-4xl mx-auto leading-relaxed font-sans">
-              little cat <span style={{color: '#A2612B'}}>big rawr</span>
+              little cat <span style={{color: '#FF8C00'}}>big rawr</span>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <div className="flex items-center space-x-2 text-gray-600">
-                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
-                <span className="text-sm font-medium" style={{color: '#A2612B'}}>Live on Solana</span>
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#FF8C00'}}></div>
+                <span className="text-sm font-medium" style={{color: '#FF8C00'}}>Live on Solana</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-600">
-                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
-                <span className="text-sm font-medium" style={{color: '#A2612B'}}>Pump.fun Launch</span>
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#FF8C00'}}></div>
+                <span className="text-sm font-medium" style={{color: '#FF8C00'}}>Pump.fun Launch</span>
               </div>
             </div>
           </div>
@@ -143,11 +146,11 @@ export default function Home() {
         {/* Social Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* X Community Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #A2612B'}}>
+          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #FF8C00'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#A2612B'}}>
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#FF8C00'}}>
                   <Image
                     src="/images/sample-x-logo.svg"
                     alt="X Logo"
@@ -157,7 +160,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-2 font-sans">X Community</h3>
-                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
+                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#FF8C00'}}></div>
               </div>
               <p className="text-black mb-8 text-center leading-relaxed font-sans">
                 Join our vibrant community on X (Twitter) for the latest updates, memes, and community discussions.
@@ -168,7 +171,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
-                  style={{backgroundColor: '#A2612B', color: 'white'}}
+                  style={{backgroundColor: '#FF8C00', color: 'white'}}
                 >
                   <span>Join Community</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,11 +183,11 @@ export default function Home() {
           </div>
 
           {/* Dexscreener Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #A2612B'}}>
+          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #FF8C00'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#A2612B'}}>
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#FF8C00'}}>
                   <Image
                     src="/images/dex-screener-logo-png_seeklogo-527276.png"
                     alt="Dexscreener Logo"
@@ -194,7 +197,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-2 font-sans">Live Chart</h3>
-                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
+                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#FF8C00'}}></div>
               </div>
               <p className="text-black mb-8 text-center leading-relaxed font-sans">
                 Track real-time price movements, trading volume, and market data for $rawr on Dexscreener.
@@ -205,7 +208,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
-                  style={{backgroundColor: '#A2612B', color: 'white'}}
+                  style={{backgroundColor: '#FF8C00', color: 'white'}}
                 >
                   <span>View Chart</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,9 +226,9 @@ export default function Home() {
             <h3 className="text-4xl lg:text-5xl font-bold text-black mb-4 font-sans">
               Live Chart
             </h3>
-            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#A2612B'}}></div>
+            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#FF8C00'}}></div>
           </div>
-          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl" style={{border: '2px solid #A2612B'}}>
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl" style={{border: '2px solid #FF8C00'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl"></div>
             <div className="relative">
               <div id="dexscreener-embed" className="relative w-full pb-[125%] rounded-xl overflow-hidden">
@@ -245,7 +248,7 @@ export default function Home() {
             <h3 className="text-4xl lg:text-5xl font-bold text-black mb-4 font-sans">
               Community Memes
             </h3>
-            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#A2612B'}}></div>
+            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#FF8C00'}}></div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -260,7 +263,7 @@ export default function Home() {
               'G3zGHNvXwAAXFxT.jpg',
               'G3zZ5IvWkAAstvM.jpg'
             ].map((memeFile, index) => (
-              <div key={index} className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10" style={{border: '2px solid #A2612B'}}>
+              <div key={index} className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10" style={{border: '2px solid #FF8C00'}}>
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative">
                   <div className="aspect-square rounded-xl overflow-hidden mb-4">
@@ -277,7 +280,7 @@ export default function Home() {
                       href={`/images/memes/${memeFile}`}
                       download={memeFile}
                       className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                      style={{backgroundColor: '#A2612B', color: 'white'}}
+                      style={{backgroundColor: '#FF8C00', color: 'white'}}
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -293,11 +296,11 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="relative bg-white/80 backdrop-blur-sm z-10" style={{borderTop: '2px solid #A2612B'}}>
+      <footer className="relative bg-white/80 backdrop-blur-sm z-10" style={{borderTop: '2px solid #FF8C00'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{backgroundColor: '#A2612B'}}>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{backgroundColor: '#FF8C00'}}>
                 <span className="text-white font-bold text-sm">$</span>
               </div>
               <h4 className="text-2xl font-bold text-black font-sans">
@@ -311,7 +314,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors font-medium"
-                style={{color: '#A2612B'}}
+                style={{color: '#FF8C00'}}
               >
                 Regenkomet.dev
               </a>

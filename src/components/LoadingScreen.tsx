@@ -32,13 +32,16 @@ export default function LoadingScreen() {
       <div className="relative mb-12">
         <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 flex items-center justify-center">
           <div className="relative group">
-            <div className="absolute inset-0 rounded-2xl blur-lg opacity-30" style={{backgroundColor: '#A2612B'}}></div>
+            <div className="absolute inset-0 rounded-2xl blur-lg opacity-30" style={{backgroundColor: '#FF8C00'}}></div>
             <Image
               src="/images/rawr.jpg"
               alt="$rawr Logo"
               width={192}
               height={192}
               className="relative rounded-2xl w-full h-full object-cover shadow-2xl"
+              onLoad={(e) => {
+                e.currentTarget.style.animation = 'bounce-in 0.8s ease-out';
+              }}
               priority
             />
           </div>
@@ -47,10 +50,10 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans" style={{color: '#A2612B'}}>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans" style={{color: '#FF8C00'}}>
           $rawr
         </h2>
-        <p className="text-lg lg:text-xl font-light font-sans" style={{color: '#A2612B'}}>
+        <p className="text-lg lg:text-xl font-light font-sans" style={{color: '#FF8C00'}}>
           Loading little cat...
         </p>
       </div>
@@ -60,7 +63,7 @@ export default function LoadingScreen() {
         <div className="bg-gray-200 rounded-full h-4 border border-gray-300 overflow-hidden backdrop-blur-sm">
           <div 
             className="h-full rounded-full transition-all duration-300 ease-out relative"
-            style={{ width: `${progress}%`, backgroundColor: '#A2612B' }}
+            style={{ width: `${progress}%`, backgroundColor: '#FF8C00' }}
           >
             {/* Shimmer effect on progress bar */}
             <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
@@ -69,7 +72,7 @@ export default function LoadingScreen() {
         
         {/* Progress Text */}
         <div className="text-center mt-6">
-          <span className="text-lg font-medium" style={{color: '#A2612B'}}>
+          <span className="text-lg font-medium" style={{color: '#FF8C00'}}>
             {Math.round(progress)}%
           </span>
         </div>
@@ -77,9 +80,9 @@ export default function LoadingScreen() {
 
       {/* Loading Dots Animation */}
       <div className="flex space-x-3 mt-12">
-        <div className="w-3 h-3 bg-yellow-400 rounded-full animate-bounce"></div>
-        <div className="w-3 h-3 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-        <div className="w-3 h-3 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+        <div className="w-3 h-3 rounded-full animate-bounce" style={{backgroundColor: '#FF8C00'}}></div>
+        <div className="w-3 h-3 rounded-full animate-bounce" style={{backgroundColor: '#FF8C00', animationDelay: '0.1s'}}></div>
+        <div className="w-3 h-3 rounded-full animate-bounce" style={{backgroundColor: '#FF8C00', animationDelay: '0.2s'}}></div>
       </div>
     </div>
   )
