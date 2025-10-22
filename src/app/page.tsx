@@ -6,6 +6,7 @@ import LoadingScreen from '@/components/LoadingScreen'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
+  const [isContentReady, setIsContentReady] = useState(false)
   const contractAddress = "7bQKAMxamCoLxhscYXYu7tkEbgSLdMrJrktTdZq8pump"
   const pumpFunUrl = "https://pump.fun/coin/7bQKAMxamCoLxhscYXYu7tkEbgSLdMrJrktTdZq8pump"
   const xCommunityUrl = "https://x.com/i/communities/1979873585234866279"
@@ -15,6 +16,10 @@ export default function Home() {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false)
+      // Give a small delay to ensure content is ready
+      setTimeout(() => {
+        setIsContentReady(true)
+      }, 100)
     }, 3000) // 3 seconds loading time
 
     return () => clearTimeout(timer)
@@ -55,12 +60,10 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
-  if (isLoading) {
-    return <LoadingScreen />
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white relative overflow-hidden">
+    <>
+      {isLoading && <LoadingScreen />}
+      <div className={`min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white relative overflow-hidden transition-opacity duration-500 ${!isLoading && isContentReady ? 'opacity-100' : 'opacity-0'}`}>
       {/* Background Lion Emojis */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-10 left-10 text-4xl opacity-10 animate-pulse">🦁</div>
@@ -343,6 +346,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
