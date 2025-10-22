@@ -63,9 +63,9 @@ export default function Home() {
               </h1>
             </div>
             
-            <div className="flex items-center space-x-3 bg-gray-100 rounded-lg px-4 py-2 border border-gray-200">
-              <span className="text-sm text-gray-600 font-medium">Contract:</span>
-              <code className="text-xs bg-gray-200 px-3 py-1 rounded font-mono max-w-[200px] lg:max-w-none truncate" style={{color: '#A2612B'}}>
+            <div className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-lg px-4 py-2 border" style={{borderColor: '#A2612B', borderWidth: '2px'}}>
+              <span className="text-sm text-black font-medium">Contract:</span>
+              <code className="text-xs px-3 py-1 rounded font-mono max-w-[200px] lg:max-w-none truncate" style={{color: '#A2612B', backgroundColor: 'rgba(162, 97, 43, 0.1)'}}>
                 {contractAddress}
               </code>
               <button
