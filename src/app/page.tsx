@@ -78,10 +78,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-4 lg:py-6 gap-4 lg:gap-0">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">$</span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/rawr.jpg"
+                  alt="$rawr Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-glow">
+              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-fire">
                 $rawr
               </h1>
             </div>
@@ -142,10 +148,10 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-fun">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-neon">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-marker">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-marker text-outline">
               little cat big rawr
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
@@ -177,7 +183,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-glow">X Community</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-fire">X Community</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -213,7 +219,7 @@ export default function Home() {
                     className="text-black"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-glow">Dexscreener</h3>
+                <h3 className="text-3xl font-bold text-white mb-2 font-bebas text-shadow-neon">Dexscreener</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
@@ -239,7 +245,7 @@ export default function Home() {
         {/* Chart Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-bangers text-shadow-fun">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-bangers text-shadow-fire">
               Live Chart
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -261,7 +267,7 @@ export default function Home() {
         {/* Memes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-fun">
+            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-neon">
               Community Memes
             </h3>
             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
@@ -318,7 +324,7 @@ export default function Home() {
               <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
                 <span className="text-black font-bold text-sm">$</span>
               </div>
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-glow">
+              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-bangers text-shadow-fire">
                 $rawr
               </h4>
             </div>
