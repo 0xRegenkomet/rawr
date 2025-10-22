@@ -25,46 +25,6 @@ export default function Home() {
     // You could add a toast notification here
   }
 
-  useEffect(() => {
-    // Parallax scrolling effect
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset
-      const windowHeight = window.innerHeight
-      const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast')
-      
-      parallaxElements.forEach((element) => {
-        const htmlElement = element as HTMLElement
-        const rect = htmlElement.getBoundingClientRect()
-        const elementTop = rect.top + scrolled
-        const elementHeight = rect.height
-        
-        // Only apply parallax when element is in viewport
-        if (rect.bottom >= 0 && rect.top <= windowHeight) {
-          const speed = htmlElement.classList.contains('parallax-slow') ? 0.3 : 
-                       htmlElement.classList.contains('parallax-medium') ? 0.5 : 0.7
-          
-          // Calculate parallax offset based on element position
-          const yPos = -(scrolled - elementTop + windowHeight) * speed
-          htmlElement.style.transform = `translateY(${yPos}px)`
-        }
-      })
-    }
-
-    // Throttle scroll events for better performance
-    let ticking = false
-    const throttledHandleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          handleScroll()
-          ticking = false
-        })
-        ticking = true
-      }
-    }
-
-    window.addEventListener('scroll', throttledHandleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', throttledHandleScroll)
-  }, [])
 
   if (isLoading) {
     return <LoadingScreen />
@@ -137,7 +97,7 @@ export default function Home() {
           {/* Logo */}
           <div className="relative mb-8 lg:mb-12">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-8 flex items-center justify-center">
-              <div className="relative group parallax-slow">
+              <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <Image
                   src="/images/rawr.jpg"
@@ -162,10 +122,10 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful parallax-medium">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-lilita text-shadow-colorful parallax-fast">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-lilita text-shadow-colorful">
               little cat big rawr
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
@@ -184,7 +144,7 @@ export default function Home() {
         {/* Social Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* X Community Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift parallax-slow">
+          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
@@ -220,7 +180,7 @@ export default function Home() {
           </div>
 
           {/* Dexscreener Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift parallax-medium">
+          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift">
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
