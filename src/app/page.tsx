@@ -58,19 +58,20 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-sans">
+              <h1 className="text-2xl lg:text-3xl font-bold text-black font-sans">
                 $rawr
               </h1>
             </div>
             
             <div className="flex items-center space-x-3 bg-gray-100 rounded-lg px-4 py-2 border border-gray-200">
               <span className="text-sm text-gray-600 font-medium">Contract:</span>
-              <code className="text-xs bg-gray-200 px-3 py-1 rounded text-orange-600 font-mono max-w-[200px] lg:max-w-none truncate">
+              <code className="text-xs bg-gray-200 px-3 py-1 rounded font-mono max-w-[200px] lg:max-w-none truncate" style={{color: '#A2612B'}}>
                 {contractAddress}
               </code>
               <button
                 onClick={() => copyToClipboard(contractAddress)}
-                className="text-gray-600 hover:text-orange-600 transition-colors p-1 hover:bg-gray-200 rounded"
+                className="text-gray-600 transition-colors p-1 hover:bg-gray-200 rounded"
+                style={{color: '#A2612B'}}
                 title="Copy contract address"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +84,8 @@ export default function Home() {
                 href={pumpFunUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
+                className="px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
+                style={{backgroundColor: '#A2612B', color: 'white'}}
               >
                 Buy Now
               </a>
@@ -98,7 +100,7 @@ export default function Home() {
           <div className="relative mb-8 lg:mb-12">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-8 flex items-center justify-center">
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="absolute inset-0 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" style={{backgroundColor: '#A2612B'}}></div>
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
@@ -144,11 +146,11 @@ export default function Home() {
         {/* Social Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* X Community Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift">
+          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #A2612B'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#A2612B'}}>
                   <Image
                     src="/images/sample-x-logo.svg"
                     alt="X Logo"
@@ -158,7 +160,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-2 font-serif">X Community</h3>
-                <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
               </div>
               <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
                 Join our vibrant community on X (Twitter) for the latest updates, memes, and community discussions.
@@ -168,7 +170,8 @@ export default function Home() {
                   href={xCommunityUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  className="inline-flex items-center space-x-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  style={{backgroundColor: '#A2612B', color: 'white'}}
                 >
                   <span>Join Community</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -180,11 +183,11 @@ export default function Home() {
           </div>
 
           {/* Dexscreener Card */}
-          <div className="group relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift">
+          <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift" style={{border: '2px solid #A2612B'}}>
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
+                <div className="w-16 h-16 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse" style={{backgroundColor: '#A2612B'}}>
                   <Image
                     src="/images/dex-screener-logo-png_seeklogo-527276.png"
                     alt="Dexscreener Logo"
@@ -194,7 +197,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="text-3xl font-bold text-black mb-2 font-serif">Live Chart</h3>
-                <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
+                <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
               </div>
               <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
                 Track real-time price movements, trading volume, and market data for $rawr on Dexscreener.
@@ -204,7 +207,8 @@ export default function Home() {
                   href={dexscreenerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  className="inline-flex items-center space-x-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  style={{backgroundColor: '#A2612B', color: 'white'}}
                 >
                   <span>View Chart</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

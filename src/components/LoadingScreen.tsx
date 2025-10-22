@@ -32,7 +32,7 @@ export default function LoadingScreen() {
       <div className="relative mb-12">
         <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 flex items-center justify-center">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl blur-lg opacity-30 animate-pulse"></div>
+            <div className="absolute inset-0 rounded-2xl blur-lg opacity-30 animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
             <Image
               src="/images/rawr.jpg"
               alt="$rawr Logo"
@@ -47,10 +47,10 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-4 animate-pulse font-serif">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 animate-pulse font-serif" style={{color: '#A2612B'}}>
           $rawr
         </h2>
-        <p className="text-gray-700 text-lg lg:text-xl font-light font-mono">
+        <p className="text-lg lg:text-xl font-light font-mono" style={{color: '#A2612B'}}>
           Loading little cat...
         </p>
       </div>
@@ -59,8 +59,8 @@ export default function LoadingScreen() {
       <div className="w-80 sm:w-96 lg:w-[28rem] mx-auto">
         <div className="bg-gray-200 rounded-full h-4 border border-gray-300 overflow-hidden backdrop-blur-sm">
           <div 
-            className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full transition-all duration-300 ease-out relative"
-            style={{ width: `${progress}%` }}
+            className="h-full rounded-full transition-all duration-300 ease-out relative"
+            style={{ width: `${progress}%`, backgroundColor: '#A2612B' }}
           >
             {/* Shimmer effect on progress bar */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
