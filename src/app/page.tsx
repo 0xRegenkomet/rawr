@@ -32,17 +32,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-black relative overflow-hidden">
-      {/* Background Lion Emojis */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-10 left-10 text-4xl opacity-30 animate-pulse">🦁</div>
-        <div className="absolute top-32 right-20 text-3xl opacity-35 animate-pulse" style={{ animationDelay: '1s' }}>🦁</div>
-        <div className="absolute top-64 left-1/4 text-5xl opacity-30 animate-pulse" style={{ animationDelay: '2s' }}>🦁</div>
-        <div className="absolute top-96 right-1/3 text-2xl opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }}>🦁</div>
-        <div className="absolute top-1/2 left-10 text-6xl opacity-25 animate-pulse" style={{ animationDelay: '1.5s' }}>🦁</div>
-        <div className="absolute top-1/3 right-10 text-3xl opacity-35 animate-pulse" style={{ animationDelay: '2.5s' }}>🦁</div>
-        <div className="absolute bottom-32 left-1/3 text-4xl opacity-30 animate-pulse" style={{ animationDelay: '3s' }}>🦁</div>
-        <div className="absolute bottom-20 right-1/4 text-2xl opacity-40 animate-pulse" style={{ animationDelay: '0.8s' }}>🦁</div>
-      </div>
       
       {/* Navbar */}
       <nav className="relative bg-white/80 backdrop-blur-sm border-b z-10" style={{borderColor: '#FF8C00', borderWidth: '2px'}}>
