@@ -49,16 +49,28 @@
 .parallax-slow {
   transform: translateZ(0);
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .parallax-medium {
   transform: translateZ(0);
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .parallax-fast {
   transform: translateZ(0);
   will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Reduce parallax on mobile for better performance */
+@media (max-width: 768px) {
+  .parallax-slow,
+  .parallax-medium,
+  .parallax-fast {
+    transform: none !important;
+  }
 }
 
 /* Special Effect Classes */

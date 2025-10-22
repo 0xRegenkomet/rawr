@@ -29,19 +29,41 @@ export default function Home() {
     // Parallax scrolling effect
     const handleScroll = () => {
       const scrolled = window.pageYOffset
+      const windowHeight = window.innerHeight
       const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast')
       
       parallaxElements.forEach((element) => {
         const htmlElement = element as HTMLElement
-        const speed = htmlElement.classList.contains('parallax-slow') ? 0.5 : 
-                     htmlElement.classList.contains('parallax-medium') ? 0.7 : 1
-        const yPos = -(scrolled * speed)
-        htmlElement.style.transform = `translateY(${yPos}px)`
+        const rect = htmlElement.getBoundingClientRect()
+        const elementTop = rect.top + scrolled
+        const elementHeight = rect.height
+        
+        // Only apply parallax when element is in viewport
+        if (rect.bottom >= 0 && rect.top <= windowHeight) {
+          const speed = htmlElement.classList.contains('parallax-slow') ? 0.3 : 
+                       htmlElement.classList.contains('parallax-medium') ? 0.5 : 0.7
+          
+          // Calculate parallax offset based on element position
+          const yPos = -(scrolled - elementTop + windowHeight) * speed
+          htmlElement.style.transform = `translateY(${yPos}px)`
+        }
       })
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    // Throttle scroll events for better performance
+    let ticking = false
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
 
   if (isLoading) {
