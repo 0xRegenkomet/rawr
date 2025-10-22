@@ -124,10 +124,10 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-tight font-serif">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-tight font-mono">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-black font-light max-w-4xl mx-auto leading-relaxed font-mono">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-black font-light max-w-4xl mx-auto leading-relaxed font-sans">
               little cat <span style={{color: '#A2612B'}}>big rawr</span>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
@@ -159,10 +159,10 @@ export default function Home() {
                     className="text-white"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-black mb-2 font-serif">X Community</h3>
+                <h3 className="text-3xl font-bold text-black mb-2 font-sans">X Community</h3>
                 <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
               </div>
-              <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
+              <p className="text-black mb-8 text-center leading-relaxed font-sans">
                 Join our vibrant community on X (Twitter) for the latest updates, memes, and community discussions.
               </p>
               <div className="flex justify-center">
@@ -196,10 +196,10 @@ export default function Home() {
                     className="text-white"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-black mb-2 font-serif">Live Chart</h3>
+                <h3 className="text-3xl font-bold text-black mb-2 font-sans">Live Chart</h3>
                 <div className="w-12 h-1 rounded-full" style={{backgroundColor: '#A2612B'}}></div>
               </div>
-              <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
+              <p className="text-black mb-8 text-center leading-relaxed font-sans">
                 Track real-time price movements, trading volume, and market data for $rawr on Dexscreener.
               </p>
               <div className="flex justify-center">

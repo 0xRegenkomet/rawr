@@ -47,10 +47,10 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 animate-pulse font-serif" style={{color: '#A2612B'}}>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 animate-pulse font-mono" style={{color: '#A2612B'}}>
           $rawr
         </h2>
-        <p className="text-lg lg:text-xl font-light font-mono" style={{color: '#A2612B'}}>
+        <p className="text-lg lg:text-xl font-light font-sans" style={{color: '#A2612B'}}>
           Loading little cat...
         </p>
       </div>
@@ -63,13 +63,13 @@ export default function LoadingScreen() {
             style={{ width: `${progress}%`, backgroundColor: '#A2612B' }}
           >
             {/* Shimmer effect on progress bar */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
+            <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
           </div>
         </div>
         
         {/* Progress Text */}
         <div className="text-center mt-6">
-          <span className="text-gray-300 text-lg font-medium">
+          <span className="text-lg font-medium" style={{color: '#A2612B'}}>
             {Math.round(progress)}%
           </span>
         </div>
