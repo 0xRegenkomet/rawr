@@ -58,19 +58,19 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-lilita text-shadow-colorful">
+              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent font-lilita text-shadow-colorful">
                 $rawr
               </h1>
             </div>
             
             <div className="flex items-center space-x-3 bg-gray-900/50 rounded-lg px-4 py-2 border border-gray-700/50">
               <span className="text-sm text-gray-400 font-medium">Contract:</span>
-              <code className="text-xs bg-gray-800/50 px-3 py-1 rounded text-yellow-400 font-mono max-w-[200px] lg:max-w-none truncate">
+              <code className="text-xs bg-gray-800/50 px-3 py-1 rounded text-blue-400 font-mono max-w-[200px] lg:max-w-none truncate">
                 {contractAddress}
               </code>
               <button
                 onClick={() => copyToClipboard(contractAddress)}
-                className="text-gray-400 hover:text-yellow-400 transition-colors p-1 hover:bg-gray-800/50 rounded"
+                className="text-gray-400 hover:text-blue-400 transition-colors p-1 hover:bg-gray-800/50 rounded"
                 title="Copy contract address"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export default function Home() {
                 href={pumpFunUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
+                className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 hover-lift"
               >
                 Buy Now
               </a>
@@ -98,7 +98,7 @@ export default function Home() {
           <div className="relative mb-8 lg:mb-12">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 mx-auto mb-8 flex items-center justify-center">
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful">
               little cat
             </h2>
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-lilita text-shadow-colorful">
@@ -148,17 +148,17 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
                   <Image
                     src="/images/sample-x-logo.svg"
                     alt="X Logo"
                     width={24}
                     height={24}
-                    className="text-black"
+                    className="text-white"
                   />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful">X Community</h3>
-                <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
                 Join our vibrant community on X (Twitter) for the latest updates, memes, and community discussions.
@@ -168,7 +168,7 @@ export default function Home() {
                   href={xCommunityUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
                 >
                   <span>Join Community</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,17 +184,17 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
                   <Image
                     src="/images/dex-screener-logo-png_seeklogo-527276.png"
                     alt="Dexscreener Logo"
                     width={24}
                     height={24}
-                    className="text-black"
+                    className="text-white"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful float-animation">Dexscreener</h3>
-                <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full"></div>
+                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful">Live Chart</h3>
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
               </div>
               <p className="text-gray-300 mb-8 text-center leading-relaxed">
                 Track real-time price movements, trading volume, and market data for $rawr on Dexscreener.
@@ -204,7 +204,7 @@ export default function Home() {
                   href={dexscreenerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-xl font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
+                  className="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-scale"
                 >
                   <span>View Chart</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
