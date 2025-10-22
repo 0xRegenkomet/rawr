@@ -5,8 +5,6 @@ import Image from 'next/image'
 
 export default function LoadingScreen() {
   const [progress, setProgress] = useState(0)
-  const [isVisible, setIsVisible] = useState(true)
-  const [isFading, setIsFading] = useState(false)
 
   useEffect(() => {
     // Simulate loading progress
@@ -14,12 +12,6 @@ export default function LoadingScreen() {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval)
-          // Start fade out
-          setIsFading(true)
-          // Hide loading screen after fade animation
-          setTimeout(() => {
-            setIsVisible(false)
-          }, 500)
           return 100
         }
         return prev + Math.random() * 12 + 3
@@ -29,10 +21,8 @@ export default function LoadingScreen() {
     return () => clearInterval(interval)
   }, [])
 
-  if (!isVisible) return null
-
   return (
-    <div className={`fixed inset-0 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 z-50 flex flex-col items-center justify-center transition-opacity duration-500 ${isFading ? 'opacity-0' : 'opacity-100'}`}>
+    <div className="fixed inset-0 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 z-50 flex flex-col items-center justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full bg-gradient-to-br from-yellow-500/10 to-transparent"></div>
