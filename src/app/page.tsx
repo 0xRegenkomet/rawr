@@ -32,10 +32,11 @@ export default function Home() {
       const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast')
       
       parallaxElements.forEach((element) => {
-        const speed = element.classList.contains('parallax-slow') ? 0.5 : 
-                     element.classList.contains('parallax-medium') ? 0.7 : 1
+        const htmlElement = element as HTMLElement
+        const speed = htmlElement.classList.contains('parallax-slow') ? 0.5 : 
+                     htmlElement.classList.contains('parallax-medium') ? 0.7 : 1
         const yPos = -(scrolled * speed)
-        element.style.transform = `translateY(${yPos}px)`
+        htmlElement.style.transform = `translateY(${yPos}px)`
       })
     }
 
