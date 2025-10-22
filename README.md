@@ -1,153 +1,124 @@
-# Memecoin Website Template
+# $rawr - Little Cat Memecoin Website
 
-This is a complete template for creating memecoin websites. Simply replace the sample content with your actual memecoin information and customize as needed.
+A modern, animated website for the $rawr memecoin featuring falling lion emojis, community memes, and real-time price tracking.
 
-## 🚀 Quick Start
+## 🦁 Features
 
-1. **Copy this template folder** to your new project directory
-2. **Replace sample content** with your memecoin information
-3. **Install dependencies**: `npm install`
-4. **Run development server**: `npm run dev`
-5. **Build for production**: `npm run build`
+- **Animated Background**: Falling lion emojis (🦁) with smooth animations
+- **Community Memes**: Downloadable meme gallery from the community
+- **Real-time Chart**: Live Dexscreener integration for price tracking
+- **Responsive Design**: Works perfectly on all devices
+- **Smooth Loading**: Custom loading screen with fade transitions
+- **Social Integration**: Direct links to X Community and trading platforms
 
-## 📝 What to Replace
+## 🚀 Tech Stack
 
-### 1. Contract Information
-In `src/app/page.tsx`, update these variables:
-```typescript
-const contractAddress = "YOUR_CONTRACT_ADDRESS_HERE"
-const pumpFunUrl = "https://pump.fun/coin/YOUR_CONTRACT_ADDRESS_HERE"
-const xCommunityUrl = "https://x.com/i/communities/YOUR_COMMUNITY_ID_HERE"
-const dexscreenerUrl = "https://dexscreener.com/solana/YOUR_PAIR_ADDRESS_HERE"
-```
+- **Next.js 14** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Dexscreener API** - Real-time price data
+- **Pump.fun Integration** - Direct trading links
 
-### 2. Memecoin Branding
-Replace these elements throughout the files:
-- **Token Symbol**: Replace `SAMPLE` with your token symbol (e.g., `DOGE`, `PEPE`)
-- **Token Name**: Replace `Sample Memecoin` with your token name
-- **Tagline**: Replace `Your sample tagline goes here` with your actual tagline
-- **Logo**: Replace `sample-logo.jpg` with your actual logo image
+## 📱 Live Links
 
-### 3. Images
-Replace these files in `public/images/`:
-- `sample-logo.jpg` - Your main token logo
-- `sample-x-logo.svg` - X/Twitter logo (or keep the sample)
-- `sample-dexscreener-logo.png` - Dexscreener logo (or keep the sample)
-
-### 4. Metadata
-In `src/app/layout.tsx`, update:
-- `title`: Your token symbol
-- `description`: Your tagline
-- `images`: Path to your logo
-
-### 5. Package.json
-Update `package.json`:
-- `name`: Your project name
-- `description`: Your token description
-- `keywords`: Add your specific keywords
-
-## 🎨 Customization Options
-
-### Colors
-The template uses a yellow/gold color scheme. To change colors:
-1. Search for `yellow-400`, `yellow-500`, `yellow-600` in the CSS classes
-2. Replace with your preferred color (e.g., `blue-400`, `green-400`, `purple-400`)
-
-### Layout
-- Modify `src/app/page.tsx` to add/remove sections
-- Adjust the grid layouts for different screen sizes
-- Add new components in `src/components/`
-
-### Styling
-- Edit `src/app/globals.css` for global styles
-- Modify Tailwind classes in components for specific styling
-
-## 📁 File Structure
-
-```
-Extra/
-├── src/
-│   ├── app/
-│   │   ├── page.tsx          # Main page component
-│   │   ├── layout.tsx        # Root layout with metadata
-│   │   └── globals.css       # Global styles
-│   └── components/
-│       └── LoadingScreen.tsx  # Loading screen component
-├── public/
-│   └── images/
-│       ├── sample-logo.jpg           # Main logo (REPLACE)
-│       ├── sample-x-logo.svg         # X logo
-│       └── sample-dexscreener-logo.png # Dexscreener logo
-├── package.json              # Dependencies and scripts
-├── next.config.js           # Next.js configuration
-├── tailwind.config.js       # Tailwind CSS configuration
-├── tsconfig.json           # TypeScript configuration
-└── postcss.config.js       # PostCSS configuration
-```
-
-## 🔧 Technical Details
-
-- **Framework**: Next.js 14 with App Router
-- **Styling**: Tailwind CSS
-- **Language**: TypeScript
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Push your code to GitHub
-2. Connect your repository to Vercel
-3. Deploy automatically
-
-### Manual Build
-```bash
-npm run build
-npm run start
-```
-
-## 📱 Features
-
-- ✅ Responsive design (mobile-first)
-- ✅ Loading screen with progress bar
-- ✅ Contract address copy functionality
-- ✅ Social media integration (X/Twitter)
-- ✅ Dexscreener chart embedding
-- ✅ SEO optimized with metadata
-- ✅ Modern gradient design
-- ✅ Smooth animations and transitions
-
-## 🎯 SEO Optimization
-
-The template includes:
-- Open Graph meta tags
-- Twitter Card meta tags
-- Proper semantic HTML
-- Optimized images
-- Fast loading times
+- **Contract Address**: `7bQKAMxamCoLxhscYXYu7tkEbgSLdMrJrktTdZq8pump`
+- **Buy on Pump.fun**: [Trade $rawr](https://pump.fun/coin/7bQKAMxamCoLxhscYXYu7tkEbgSLdMrJrktTdZq8pump)
+- **X Community**: [Join Community](https://x.com/i/communities/1979873585234866279)
+- **Dexscreener**: [View Chart](https://dexscreener.com/solana/4sbjremyvtb4afxvzqud5tdk9mzmj3lbbo7vuiscgmys)
 
 ## 🛠️ Development
 
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 ```bash
+# Clone the repository
+git clone https://github.com/0xRegenkomet/rawr.git
+cd rawr
+
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
-
-# Build for production
-npm run build
-
-# Type checking
-npm run type-check
-
-# Linting
-npm run lint
 ```
 
-## 📞 Support
+### Build for Production
+```bash
+npm run build
+npm start
+```
 
-Created by [Regenkomet.dev](https://regenkomet.dev)
+## 🎨 Customization
+
+### Adding New Memes
+1. Add meme images to `public/images/memes/`
+2. Update the meme array in `src/app/page.tsx`
+3. The images will automatically appear in the memes section
+
+### Changing Colors
+- Update the gradient colors in `src/app/globals.css`
+- Modify the background gradient in `src/app/page.tsx`
+
+### Updating Links
+- Contract address: `src/app/page.tsx` (line 9)
+- Social links: `src/app/page.tsx` (lines 10-12)
+
+## 📁 Project Structure
+
+```
+rawr/
+├── public/
+│   ├── images/
+│   │   ├── memes/          # Community meme images
+│   │   ├── rawr.jpg        # Main logo
+│   │   └── dex-screener-logo-png_seeklogo-527276.png
+├── src/
+│   ├── app/
+│   │   ├── globals.css     # Global styles and animations
+│   │   ├── layout.tsx      # Root layout with metadata
+│   │   └── page.tsx        # Main page component
+│   └── components/
+│       └── LoadingScreen.tsx # Custom loading screen
+├── package.json
+└── README.md
+```
+
+## 🌟 Features in Detail
+
+### Falling Lions Animation
+- Dynamic lion emojis fall from top to bottom
+- Random positioning and sizing for variety
+- Smooth rotation and opacity transitions
+- Performance optimized with auto-cleanup
+
+### Memes Section
+- Responsive grid layout (1-3 columns based on screen size)
+- Download functionality for each meme
+- Hover effects and smooth transitions
+- Automatic image optimization with Next.js
+
+### Real-time Chart
+- Embedded Dexscreener chart
+- Dark theme integration
+- Responsive iframe with proper aspect ratios
+- Live price updates
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Contact
+
+- **Website**: [regenkomet.dev](https://regenkomet.dev)
+- **GitHub**: [@0xRegenkomet](https://github.com/0xRegenkomet)
 
 ---
 
-**Note**: Remember to replace all sample content with your actual memecoin information before deploying!
+**Built with ❤️ for the $rawr community**
