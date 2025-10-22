@@ -32,13 +32,13 @@ export default function LoadingScreen() {
       <div className="relative mb-12">
         <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto mb-8 flex items-center justify-center">
           <div className="relative group">
-            <div className="absolute inset-0 rounded-2xl blur-lg opacity-30 animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
+            <div className="absolute inset-0 rounded-2xl blur-lg opacity-30" style={{backgroundColor: '#A2612B'}}></div>
             <Image
               src="/images/rawr.jpg"
               alt="$rawr Logo"
               width={192}
               height={192}
-              className="relative rounded-2xl w-full h-full object-cover shadow-2xl hover-scale fade-in-up"
+              className="relative rounded-2xl w-full h-full object-cover shadow-2xl"
               priority
             />
           </div>
@@ -47,7 +47,7 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 animate-pulse font-mono" style={{color: '#A2612B'}}>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 font-sans" style={{color: '#A2612B'}}>
           $rawr
         </h2>
         <p className="text-lg lg:text-xl font-light font-sans" style={{color: '#A2612B'}}>

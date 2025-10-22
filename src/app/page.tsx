@@ -45,11 +45,11 @@ export default function Home() {
       </div>
       
       {/* Navbar */}
-      <nav className="relative bg-white border-b border-gray-200 z-10">
+      <nav className="relative bg-white/80 backdrop-blur-sm border-b z-10" style={{borderColor: '#A2612B', borderWidth: '2px'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-4 lg:py-6 gap-4 lg:gap-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg hover-scale gentle-pulse">
+              <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/rawr.jpg"
                   alt="$rawr Logo"
@@ -106,10 +106,7 @@ export default function Home() {
                   alt="$rawr Logo"
                   width={320}
                   height={320}
-                  className="relative rounded-2xl w-full h-full object-cover shadow-2xl hover-scale fade-in-up"
-                  onLoad={(e) => {
-                    e.currentTarget.style.animation = 'gentle-pulse 2s ease-in-out';
-                  }}
+                  className="relative rounded-2xl w-full h-full object-cover shadow-2xl hover-scale"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
@@ -124,7 +121,7 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-tight font-mono">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-tight font-sans">
               little cat
             </h2>
             <p className="text-xl sm:text-2xl lg:text-3xl text-black font-light max-w-4xl mx-auto leading-relaxed font-sans">
@@ -223,13 +220,13 @@ export default function Home() {
         {/* Chart Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-colorful">
+            <h3 className="text-4xl lg:text-5xl font-bold text-black mb-4 font-sans">
               Live Chart
             </h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#A2612B'}}></div>
           </div>
-          <div className="relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 shadow-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl"></div>
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-2xl" style={{border: '2px solid #A2612B'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl"></div>
             <div className="relative">
               <div id="dexscreener-embed" className="relative w-full pb-[125%] rounded-xl overflow-hidden">
                 <iframe
@@ -245,10 +242,10 @@ export default function Home() {
         {/* Memes Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-4 font-lilita text-shadow-colorful">
+            <h3 className="text-4xl lg:text-5xl font-bold text-black mb-4 font-sans">
               Community Memes
             </h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 rounded-full mx-auto" style={{backgroundColor: '#A2612B'}}></div>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -263,8 +260,8 @@ export default function Home() {
               'G3zGHNvXwAAXFxT.jpg',
               'G3zZ5IvWkAAstvM.jpg'
             ].map((memeFile, index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div key={index} className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10" style={{border: '2px solid #A2612B'}}>
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative">
                   <div className="aspect-square rounded-xl overflow-hidden mb-4">
                     <Image
@@ -279,7 +276,8 @@ export default function Home() {
                     <a
                       href={`/images/memes/${memeFile}`}
                       download={memeFile}
-                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      className="inline-flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      style={{backgroundColor: '#A2612B', color: 'white'}}
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -295,29 +293,30 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="relative border-t border-gray-800/50 bg-gradient-to-r from-gray-900/50 to-gray-800/30 backdrop-blur-sm z-10">
+      <footer className="relative bg-white/80 backdrop-blur-sm z-10" style={{borderTop: '2px solid #A2612B'}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                <span className="text-black font-bold text-sm">$</span>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{backgroundColor: '#A2612B'}}>
+                <span className="text-white font-bold text-sm">$</span>
               </div>
-              <h4 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-lilita text-shadow-colorful">
+              <h4 className="text-2xl font-bold text-black font-sans">
                 $rawr
               </h4>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-black text-sm mb-4">
               Website created by{' '}
               <a
                 href="https://regenkomet.dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-400 hover:text-yellow-500 transition-colors font-medium"
+                className="transition-colors font-medium"
+                style={{color: '#A2612B'}}
               >
                 Regenkomet.dev
               </a>
             </p>
-            <div className="flex items-center justify-center space-x-6 text-xs text-gray-500">
+            <div className="flex items-center justify-center space-x-6 text-xs text-black">
               <span>© 2025 $rawr</span>
               <span>•</span>
               <span>Built on Solana</span>
