@@ -22,7 +22,7 @@ export default function LoadingScreen() {
   }, [])
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 z-50 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full bg-gradient-to-br from-yellow-500/10 to-transparent"></div>
@@ -47,19 +47,19 @@ export default function LoadingScreen() {
 
       {/* Loading Text */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-4 animate-pulse font-lilita text-shadow-colorful">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-4 animate-pulse font-serif">
           $rawr
         </h2>
-        <p className="text-gray-300 text-lg lg:text-xl font-light font-lilita text-shadow-colorful">
+        <p className="text-gray-700 text-lg lg:text-xl font-light font-mono">
           Loading little cat...
         </p>
       </div>
 
       {/* Loading Bar */}
       <div className="w-80 sm:w-96 lg:w-[28rem] mx-auto">
-        <div className="bg-gray-800/50 rounded-full h-4 border border-gray-700/50 overflow-hidden backdrop-blur-sm">
+        <div className="bg-gray-200 rounded-full h-4 border border-gray-300 overflow-hidden backdrop-blur-sm">
           <div 
-            className="h-full bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full transition-all duration-300 ease-out relative"
+            className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full transition-all duration-300 ease-out relative"
             style={{ width: `${progress}%` }}
           >
             {/* Shimmer effect on progress bar */}

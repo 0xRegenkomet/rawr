@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white relative overflow-hidden">
+    <div className="min-h-screen bg-white text-black relative overflow-hidden">
       {/* Background Lion Emojis */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-10 left-10 text-4xl opacity-10 animate-pulse">🦁</div>
@@ -45,7 +45,7 @@ export default function Home() {
       </div>
       
       {/* Navbar */}
-      <nav className="relative backdrop-blur-md bg-black/20 border-b border-gray-800/50 z-10">
+      <nav className="relative bg-white border-b border-gray-200 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between py-4 lg:py-6 gap-4 lg:gap-0">
             <div className="flex items-center space-x-3">
@@ -58,19 +58,19 @@ export default function Home() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-lilita text-shadow-colorful">
+              <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-sans">
                 $rawr
               </h1>
             </div>
             
-            <div className="flex items-center space-x-3 bg-gray-900/50 rounded-lg px-4 py-2 border border-gray-700/50">
-              <span className="text-sm text-gray-400 font-medium">Contract:</span>
-              <code className="text-xs bg-gray-800/50 px-3 py-1 rounded text-yellow-400 font-mono max-w-[200px] lg:max-w-none truncate">
+            <div className="flex items-center space-x-3 bg-gray-100 rounded-lg px-4 py-2 border border-gray-200">
+              <span className="text-sm text-gray-600 font-medium">Contract:</span>
+              <code className="text-xs bg-gray-200 px-3 py-1 rounded text-orange-600 font-mono max-w-[200px] lg:max-w-none truncate">
                 {contractAddress}
               </code>
               <button
                 onClick={() => copyToClipboard(contractAddress)}
-                className="text-gray-400 hover:text-yellow-400 transition-colors p-1 hover:bg-gray-800/50 rounded"
+                className="text-gray-600 hover:text-orange-600 transition-colors p-1 hover:bg-gray-200 rounded"
                 title="Copy contract address"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -122,20 +122,20 @@ export default function Home() {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent leading-tight font-lilita text-shadow-colorful">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-black leading-tight font-serif">
               little cat
             </h2>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 font-light max-w-4xl mx-auto leading-relaxed font-lilita text-shadow-colorful">
-              little cat big rawr
+            <p className="text-xl sm:text-2xl lg:text-3xl text-black font-light max-w-4xl mx-auto leading-relaxed font-mono">
+              little cat <span style={{color: '#A2612B'}}>big rawr</span>
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Live on Solana</span>
+              <div className="flex items-center space-x-2 text-gray-600">
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
+                <span className="text-sm font-medium" style={{color: '#A2612B'}}>Live on Solana</span>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Pump.fun Launch</span>
+              <div className="flex items-center space-x-2 text-gray-600">
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{backgroundColor: '#A2612B'}}></div>
+                <span className="text-sm font-medium" style={{color: '#A2612B'}}>Pump.fun Launch</span>
               </div>
             </div>
           </div>
@@ -144,8 +144,8 @@ export default function Home() {
         {/* Social Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {/* X Community Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift">
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="group relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
@@ -157,10 +157,10 @@ export default function Home() {
                     className="text-white"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful">X Community</h3>
+                <h3 className="text-3xl font-bold text-black mb-2 font-serif">X Community</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
               </div>
-              <p className="text-gray-300 mb-8 text-center leading-relaxed">
+              <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
                 Join our vibrant community on X (Twitter) for the latest updates, memes, and community discussions.
               </p>
               <div className="flex justify-center">
@@ -180,8 +180,8 @@ export default function Home() {
           </div>
 
           {/* Dexscreener Card */}
-          <div className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/10 hover-lift">
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div className="group relative bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 hover:border-gray-300 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover-lift">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
             <div className="relative">
               <div className="flex flex-col items-center mb-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform gentle-pulse">
@@ -193,10 +193,10 @@ export default function Home() {
                     className="text-white"
                   />
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2 font-lilita text-shadow-colorful">Live Chart</h3>
+                <h3 className="text-3xl font-bold text-black mb-2 font-serif">Live Chart</h3>
                 <div className="w-12 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full"></div>
               </div>
-              <p className="text-gray-300 mb-8 text-center leading-relaxed">
+              <p className="text-gray-700 mb-8 text-center leading-relaxed font-sans">
                 Track real-time price movements, trading volume, and market data for $rawr on Dexscreener.
               </p>
               <div className="flex justify-center">
